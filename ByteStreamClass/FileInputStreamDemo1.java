@@ -35,7 +35,9 @@ public class FileInputStreamDemo1{
         FileOutputStream outputS1 = new FileOutputStream(new File(homePath, "image3.png"));
         //create an array of byte which acts as a buffer for storing the contents of the file.
         long image1Length = new File(homePath, "image1.png").length();
+        //length() method return the size of the file in bytes.
         byte[] arrayBuffer = new byte[(int) image1Length];
+        //Read method uses the arrayBuffer to store the read bytes and later write uses this buffer to write
         inputS1.read(arrayBuffer);
         outputS1.write(arrayBuffer);
         
